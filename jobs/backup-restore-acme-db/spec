@@ -1,0 +1,27 @@
+---
+# This job name should be unique, as several backup and restore scripts for different components could be collocated on the same machine.
+# The directory structure will be organized by job name.
+name: backup-restore-acme-db
+
+description: "This sample job will be collocated with the BBR SDK release on the backup-restore instance."
+
+templates:
+  config.json.erb: config/backup-restore-acme-db-config.json
+  backup.sh.erb: bin/bbr/backup
+  restore.sh.erb: bin/bbr/restore
+
+packages: []
+
+properties:
+  my_release.database.name:
+    description: "Name of the database"
+  my_release.database.user:
+    description: "User seeded on the database for my release"
+  my_release.database.password:
+    description: "Password seeded on the database for my release"
+  my_release.database.host:
+    description: "Host of the database server"
+  my_release.database.port:
+    description: "Port of the database server"
+  my_release.database.scheme:
+    description: "We support MySQL or Postgres"
