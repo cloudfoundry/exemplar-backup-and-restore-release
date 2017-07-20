@@ -1,7 +1,7 @@
 ---
 # This job name should be unique, as several backup and restore scripts for different components could be collocated on the same machine.
 # The directory structure will be organized by job name.
-name: backup-restore-acme-db
+name: bbr_acmedb
 
 description: "This sample job will be collocated with the BBR SDK release on the backup-restore instance."
 
