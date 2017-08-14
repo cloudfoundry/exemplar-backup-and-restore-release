@@ -1,0 +1,23 @@
+#!/bin/bash
+
+PIDFILE="${RUN_DIR}/acme.pid"
+
+case $1 in
+
+  start)
+    echo $$ > "$PIDFILE"
+    sleep 10000
+
+    ;;
+
+  stop)
+    kill $(cat "${PIDFILE}")
+
+    ;;
+
+  *)
+    echo "Usage: acme_ctl {start|stop}"
+
+    ;;
+
+esac

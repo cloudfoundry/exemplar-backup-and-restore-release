@@ -1,0 +1,7 @@
+check process acme-api
+  with pidfile /var/vcap/sys/run/acme-api/acme.pid
+  start program "/var/vcap/jobs/acme-api/bin/acme_ctl start"
+        as uid vcap and gid vcap
+  stop program "/var/vcap/jobs/acme-api/bin/acme_ctl stop"
+        as uid vcap and gid vcap
+  group vcap

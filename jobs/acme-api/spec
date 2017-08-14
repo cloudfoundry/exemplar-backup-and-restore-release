@@ -1,0 +1,13 @@
+---
+name: acme-api
+
+description: "This is an example release component which should contain your lock/unlock scripts make use of monit. You will want to use lock/unlock scripts if your component could change the state of the database during backup, or if the database could go out of sync with other components."
+
+templates:
+  pre-backup-lock.sh.erb: bin/bbr/pre-backup-lock
+  post-backup-unlock.sh.erb: bin/bbr/post-backup-unlock
+  acme_ctl.erb: bin/acme_ctl
+
+packages: []
+
+properties: {}

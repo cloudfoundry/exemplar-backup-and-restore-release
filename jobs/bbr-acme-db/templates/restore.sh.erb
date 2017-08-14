@@ -2,10 +2,11 @@
 set -ex
 
 JOB_PATH="/var/vcap/jobs/backup-restore-acme-db"
+SDK_PATH="/var/vcap/jobs/database-backup-restorer"
 
 # Anything placed in the BBR_ARTIFACT_DIRECTORY by the backup script will be available to the restore script at restore time.
 # The BBR CLI is responsible for setting the BBR_ARTIFACT_DIRECTORY
 BBR_ARTIFACT_FILE_PATH="${BBR_ARTIFACT_DIRECTORY}/my-artifact-file"
 CONFIG_PATH="${JOB_PATH}/config/backup-restore-acme-db-config.json"
 
-"${JOB_PATH}/bin/backup" --config "${CONFIG_PATH}" --artifact-file "${BBR_ARTIFACT_FILE_PATH}"
+"${SDK_PATH}/bin/restore" --config "${CONFIG_PATH}" --artifact-file "${BBR_ARTIFACT_FILE_PATH}"
