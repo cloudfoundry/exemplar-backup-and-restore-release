@@ -4,7 +4,7 @@ This [BOSH](https://bosh.io/docs) release provides examples on how Cloud Foundry
 
 Based on our experience with the current implementation of the backup and restore process for Cloud Foundry deployments, we have provided two example jobs to use as reference:
 
-1. bbr-acme-db: This is intended to be collocated with the [BBR SDK release](https://github.com/pivotal-cf/backup-and-restore-sdk-release), potentially on a Backup-Restore VM instance. It contains the actual backup and restore logic to be implemented by the release author.
+1. bbr-acme-db: This is intended to be collocated with the [BBR SDK release](https://github.com/pivotal-cf/backup-and-restore-sdk-release). This job needs to be on a VM that has a persistent disk with sufficient space to store the backup artifact; the Backup-Restore VM instance can be used for this purpose. This job contains the actual backup and restore logic to be implemented by the release author.
 1. acme-api: This component contains collocated lock and unlock scripts to enable the use of monit to start and stop component processes, should the component require locking during database backup. Note that the unlock script should be idempotent (as it may be called any number of times).
 
 Note that these scripts can technically be placed on any VM in the deployment, but usually will be collocated with the component they are interacting with.
