@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 set -ex
 
-/var/vcap/bosh/bin/monit start acme-api
+<% if p('my_release.release_level_backup') %>
+  /var/vcap/bosh/bin/monit start acme-api
+<% end %>

@@ -10,4 +10,7 @@ templates:
 
 packages: []
 
-properties: {}
+properties:
+  my_release.release_level_backup:
+    default: false
+    description: "Enable bbr scripts"

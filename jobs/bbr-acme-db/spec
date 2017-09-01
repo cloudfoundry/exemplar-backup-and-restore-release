@@ -25,3 +25,6 @@ properties:
     description: "Port of the database server"
   my_release.database.scheme:
     description: "We support MySQL or Postgres"
+  my_release.release_level_backup:
+    default: false
+    description: "Enable bbr scripts"
