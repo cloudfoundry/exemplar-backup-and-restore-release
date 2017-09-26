@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+<% if p('release_level_backup') %>
 set -ex
 
-<% if p('my_release.release_level_backup') %>
-  /var/vcap/bosh/bin/monit stop acme-api
-  # wait for job to stop
+/var/vcap/bosh/bin/monit stop acme-api
+# wait for job to stop
+<% else %>
+echo "script deactivated due to release_level_backup being set to FALSE\n"
 <% end %>

@@ -13,18 +13,18 @@ templates:
 packages: []
 
 properties:
-  my_release.database.name:
+  database.name:
     description: "Name of the database"
-  my_release.database.user:
+  database.user:
     description: "User seeded on the database for my release"
-  my_release.database.password:
+  database.password:
     description: "Password seeded on the database for my release"
-  my_release.database.host:
+  database.host:
     description: "Host of the database server"
-  my_release.database.port:
+  database.port:
     description: "Port of the database server"
-  my_release.database.scheme:
+  database.scheme:
     description: "We support MySQL or Postgres"
-  my_release.release_level_backup:
+  release_level_backup:
     default: false
-    description: "Enable bbr scripts"
+    description: "Use newer bbr scripts which are split by release"
