@@ -11,4 +11,4 @@ Note that these scripts can technically be placed on any VM in the deployment, b
 
 Note that the bbr scripts in these example jobs depend upon the `release_level_backup` job property and run but do nothing if it is false; CF release authors should ensure that their bbr scripts follow this pattern.
 
-More information on the orchestration and contract between BBR and component scripts can be found in the [BBR Release Author Documentation](https://docs.pivotal.io/tiledev/bbr-devguide.html)
+More information on the orchestration and contract between BBR and component scripts can be found in the [BBR Release Author Documentation](https://docs.pivotal.io/bbr/bbr-devguide.html)
