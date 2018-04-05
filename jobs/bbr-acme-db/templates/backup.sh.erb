@@ -2,7 +2,7 @@
 <% if p('release_level_backup') %>
 set -ex
 
-JOB_PATH="/var/vcap/jobs/backup-restore-acme-db"
+JOB_PATH="/var/vcap/jobs/bbr-acme-db"
 SDK_PATH="/var/vcap/jobs/database-backup-restorer"
 
 # Anything placed in the BBR_ARTIFACT_DIRECTORY by the backup script will be available to the restore script at restore time.
