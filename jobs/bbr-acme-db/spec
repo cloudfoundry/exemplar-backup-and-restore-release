@@ -9,6 +9,7 @@ templates:
   config.json.erb: config/backup-restore-acme-db-config.json
   backup.sh.erb: bin/bbr/backup
   restore.sh.erb: bin/bbr/restore
+  bpm.yml.erb: config/bpm.yml
 
 packages: []
 
