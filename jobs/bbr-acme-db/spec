@@ -29,3 +29,6 @@ properties:
   release_level_backup:
     default: false
     description: "Use newer bbr scripts which are split by release"
+  bpm.enabled:
+    default: false
+    description: "Enable Bosh Process Manager"
