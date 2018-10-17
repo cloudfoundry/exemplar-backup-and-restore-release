@@ -9,9 +9,9 @@ processes:
         allow_executions: true
 - name: restore
   executable: /var/vcap/jobs/bbr-acme-db/bin/bbr/restore
-    args:
-    - run
-    unsafe:
-      unrestricted_volumes:
-        - path: /var/vcap/jobs/database-backup-restorer/bin
-          allow_executions: true
+  args:
+  - run
+  unsafe:
+    unrestricted_volumes:
+      - path: /var/vcap/jobs/database-backup-restorer/bin
+        allow_executions: true
