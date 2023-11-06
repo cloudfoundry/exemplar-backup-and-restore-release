@@ -2,7 +2,7 @@
 
 This [BOSH][bosh_docs] release provides examples on how Cloud Foundry release authors can structure their jobs to implement the contract with BBR. This release is not intended to be a generic [exemplar release][exemplar_release_repo].
 
-[bosh_docs]: https://bosh.io/docs
+[bosh_docs]: https://bosh.io/docs/
 [exemplar_release_repo]: https://github.com/cloudfoundry/exemplar-release
 
 Based on our experience with the current implementation of the backup and restore process for Cloud Foundry deployments, we have provided two example jobs to use as reference:
@@ -11,9 +11,9 @@ Based on our experience with the current implementation of the backup and restor
 
 2. `acme-api`: This component contains collocated lock and unlock scripts to enable the use of monit to start and stop component processes, should the component require locking during database backup. Note that the unlock script should be idempotent (as it may be called any number of times).
 
-[bbr_sdk_repo]: https://github.com/pivotal-cf/backup-and-restore-sdk-release
-[bpm_release]: https://github.com/cloudfoundry-incubator/bpm-release
-[bpm_transitioning_docs]: https://github.com/cloudfoundry-incubator/bpm-release/blob/master/docs/transitioning.md#updating-deployment-manifest
+[bbr_sdk_repo]: https://github.com/cloudfoundry/backup-and-restore-sdk-release
+[bpm_release]: https://github.com/cloudfoundry/bpm-release
+[bpm_transitioning_docs]: https://github.com/cloudfoundry/bpm-release/blob/master/docs/transitioning.md#updating-deployment-manifest
 
 Note that these scripts can technically be placed on any VM in the deployment, but usually will be collocated with the component they are interacting with.
 
@@ -21,4 +21,4 @@ Note that the BBR scripts in these example jobs depend upon the `release_level_b
 
 More information on the orchestration and contract between BBR and component scripts can be found in the [BBR Release Author Documentation][bbr_devguide].
 
-[bbr_devguide]: https://docs.pivotal.io/bbr/bbr-devguide.html
+[bbr_devguide]: https://docs.cloudfoundry.org/bbr/bbr-devguide.html
