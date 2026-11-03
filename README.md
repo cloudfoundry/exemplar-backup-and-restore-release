@@ -29,7 +29,7 @@ jobs to use as reference:
 
 [bbr_sdk_repo]: https://github.com/cloudfoundry/backup-and-restore-sdk-release
 [bpm_release]: https://github.com/cloudfoundry/bpm-release
-[bpm_transitioning_docs]: https://github.com/cloudfoundry/bpm-release/blob/master/docs/transitioning.md#updating-deployment-manifest
+[bpm_transitioning_docs]: https://github.com/cloudfoundry/bpm-release/blob/main/docs/transitioning.md#updating-deployment-manifest
 
 Note that these scripts can technically be placed on any VM in the deployment,
 but usually will be collocated with the component they are interacting with.
